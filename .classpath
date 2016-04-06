@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.32/jcommander-1.32.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/eclipselink/2.5.0-RC1/eclipselink-2.5.0-RC1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/javax.persistence/2.1.0-RC1/javax.persistence-2.1.0-RC1.jar"/>
+  <classpathentry kind="lib" path="lib/ojdbc7.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-validator/5.2.3.Final/hibernate-validator-5.2.3.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar"/>
+</classpath>
