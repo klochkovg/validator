@@ -15,6 +15,9 @@ import org.hibernate.validator.HibernateValidatorConfiguration;
 import org.hibernate.validator.cfg.ConstraintMapping;
 import org.hibernate.validator.cfg.defs.NotNullDef;
 import org.hibernate.validator.cfg.defs.SizeDef;
+
+import ru.prime.app.validator.Validator;
+
 import org.hibernate.validator.cfg.defs.DecimalMinDef;
 import org.hibernate.validator.cfg.defs.DecimalMaxDef;
 import org.hibernate.validator.cfg.defs.PatternDef;
@@ -25,7 +28,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.validation.Validation;
-import javax.validation.Validator;
+//import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import javax.validation.ConstraintViolation;
 
@@ -94,13 +97,13 @@ public class Main{
 	            .constraint( new PatternDef().regexp("[a-z]*"));
 
 		FileInputStream in = new FileInputStream(new File("validationRule.xml"));
-		Validator validator2 = configuration.addMapping( constraintMapping )
+		javax.validation.Validator validator2 = configuration.addMapping( constraintMapping )
 		        .buildValidatorFactory()
 		        .getValidator();
 		//configuration.addMapping(in);
 		
 		ValidatorFactory validationFactory = configuration.buildValidatorFactory();
-		Validator validator = validationFactory.getValidator();
+		javax.validation.Validator validator = validationFactory.getValidator();
 
 		
 		
@@ -148,12 +151,15 @@ public class Main{
 
     public static void main(String[] args){
     	System.out.println("EclipseLink test");
-    	Main app = new Main();
+/*    	Main app = new Main();
     	try{
     		app.run();
     	}catch(IOException ex){
     		ex.printStackTrace();
-    	}
+    	}*/
+    	Validator val = new Validator();
+    	val.setFileName("SimpleValidationRule.xml");
+    	val.run();
     }
 
 }
